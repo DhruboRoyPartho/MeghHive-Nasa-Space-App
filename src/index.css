@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Base colors - Deep space and atmospheric theme */
+    --background: 220 25% 97%;
+    --foreground: 220 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+
+    /* Primary - Deep space blue */
+    --primary: 220 40% 25%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary - Atmospheric teal */
+    --secondary: 190 70% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 15% 92%;
+    --muted-foreground: 220 10% 45%;
+
+    /* Accent - Bright cyan for highlights */
+    --accent: 190 100% 50%;
+    --accent-foreground: 220 40% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 20% 85%;
+    --input: 220 20% 90%;
+    --ring: 190 70% 50%;
+
+    /* AQI Color Scale */
+    --aqi-good: 120 60% 50%;
+    --aqi-moderate: 50 100% 50%;
+    --aqi-unhealthy-sensitive: 30 100% 50%;
+    --aqi-unhealthy: 15 100% 50%;
+    --aqi-very-unhealthy: 350 85% 55%;
+    --aqi-hazardous: 320 70% 40%;
+
+    /* Atmospheric gradients */
+    --gradient-sky: linear-gradient(180deg, hsl(220 60% 25%) 0%, hsl(190 70% 50%) 50%, hsl(200 80% 70%) 100%);
+    --gradient-alert: linear-gradient(135deg, hsl(15 100% 50%) 0%, hsl(30 100% 50%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.9) 0%, hsl(220 20% 98% / 0.8) 100%);
+
+    /* Shadows with atmospheric glow */
+    --shadow-glow: 0 0 20px hsl(190 70% 50% / 0.2);
+    --shadow-card: 0 4px 20px hsl(220 40% 25% / 0.1);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode - Deep space theme */
+    --background: 220 40% 8%;
+    --foreground: 220 15% 95%;
+
+    --card: 220 35% 12%;
+    --card-foreground: 220 15% 95%;
+
+    --popover: 220 35% 10%;
+    --popover-foreground: 220 15% 95%;
+
+    --primary: 190 70% 50%;
+    --primary-foreground: 220 40% 10%;
+
+    --secondary: 220 30% 20%;
+    --secondary-foreground: 190 70% 90%;
+
+    --muted: 220 30% 18%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 190 100% 45%;
+    --accent-foreground: 220 40% 10%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 30% 22%;
+    --input: 220 30% 20%;
+    --ring: 190 70% 50%;
+
+    /* Dark mode gradients */
+    --gradient-sky: linear-gradient(180deg, hsl(220 50% 12%) 0%, hsl(190 60% 25%) 50%, hsl(200 70% 40%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220 35% 14% / 0.9) 0%, hsl(220 30% 16% / 0.8) 100%);
+    --shadow-glow: 0 0 30px hsl(190 70% 50% / 0.3);
+    --shadow-card: 0 4px 30px hsl(0 0% 0% / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
