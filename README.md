@@ -7,7 +7,7 @@
 
 **The project**
 
-Simply visit the project: https://meghhive.lovable.app/
+Simply visit the deployed project: https://meghhive.lovable.app/
 
 ## What technologies are used for this project?
 
